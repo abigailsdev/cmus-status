@@ -12,6 +12,8 @@ pub enum STATUSTYPE {
     PAUSED,
     /// Player is stopped.
     STOPPED,
+    /// Player is exiting.
+    EXITING,
     /// Unknown status.
     UNDEFINED,
 }
@@ -88,6 +90,7 @@ pub fn serialise(status: &str) -> Status {
                     "playing" => status.status = STATUSTYPE::PLAYING,
                     "paused" => status.status = STATUSTYPE::PAUSED,
                     "stopped" => status.status = STATUSTYPE::STOPPED,
+                    "exiting" => status.status = STATUSTYPE::EXITING,
                     _ => status.status = STATUSTYPE::UNDEFINED,
                 }
             } else if segtype == "fi" || segtype == "ar" || segtype == "ab" || segtype == "al" || segtype == "ti" {
