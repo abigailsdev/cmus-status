@@ -1,5 +1,6 @@
 [package]
 name = "cmus-status"
+description = "A crate to structure cmus status data."
 version = "1.0.0"
 edition = "2021"
 authors = ["abigailsdev <abigailsdev@proton.me>"]
