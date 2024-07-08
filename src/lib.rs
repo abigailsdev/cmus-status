@@ -141,6 +141,8 @@ pub fn serialise(status: &str) -> Status {
                     _ => panic!(),
                 }
             }
+        } else {
+            i = i + 1;
         }
     }
 
